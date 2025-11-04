@@ -8541,3 +8541,41 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+/* Mobile profile avatar adjustments */
+.mobile-author-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 56px auto 12px; /* move down and center on small screens */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 767.98px) {
+  .mobile-author-img { margin-top: 60px; width: 140px; height:140px; }
+}
+
+/* Mobile: shift hero/profile and sections down for better spacing */
+@media (max-width: 767.98px) {
+  /* push the hero area content further down (6 breaks = 9rem / 144px) */
+  .hero-wrap .js-fullheight,
+  .hero-wrap .js-fullheight > .d-flex {
+    padding-top: 9rem !important; /* move profile down on mobile (6 breaks) */
+  }
+
+  /* add extra top spacing for each main section on mobile (default sections moved ~2 breaks)
+     keep smaller default but override the Articles section below for 4 breaks */
+  .ftco-section {
+    padding-top: 2.5rem !important;
+  }
+
+  /* Articles section (immediately after hero) should be pushed further down (~4 breaks) */
+  .hero-wrap + .ftco-section {
+    padding-top: 15rem !important; /* Articles spacing on mobile (8 breaks = 12rem / 192px) */
+  }
+
+  /* ensure the mobile avatar aligns with the new offset (3 breaks) */
+  .mobile-author-img { margin-top: 9rem !important; }
+}
