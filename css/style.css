@@ -8573,7 +8573,7 @@ textarea.form-control {
 
   /* Articles section (immediately after hero) should be pushed further down (~4 breaks) */
   .hero-wrap + .ftco-section {
-    padding-top: 17rem !important; /* Articles spacing on mobile (8 breaks = 12rem / 192px) */
+    padding-top: 19rem !important; /* Articles spacing on mobile (8 breaks = 12rem / 192px) */
   }
 
   /* ensure the mobile avatar aligns with the new offset (3 breaks) */
